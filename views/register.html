@@ -15,7 +15,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script></head>
     <body>
         <div class="jumbotron">
-            <h1>Login</h1>
+            <h1>Register</h1>
         </div>
             <div class="container-sm">
                 <div class="d-flex justify-content-center">
@@ -28,11 +28,23 @@
                     <label for="pwd">Password:</label>
                     <input type="password" class="form-control" placeholder="Password" id="pwd" required>
                     </div>
-                    <button type="button" class="btn btn-primary" id="btn-login">Hacer login</button>
-                    <button type="button" class="btn btn-primary" id="btn-register">Registro</button>
+                    <div class="form-group">
+                        <label for="pwd">Confirm password:</label>
+                        <input type="password" class="form-control" placeholder="Password" id="confpwd" required>
+                        </div>
+                    <button type="button" class="btn btn-primary" id="btn-register">Registrarse</button>
+                    <button type="button" class="btn btn-primary" id="btn-volver">Volver al Login</button>
                     <div class="alert alert-danger alert-dismissible" style="display:none;" id="error">
                         <button type="button" class="close" data-dismiss="alert">&times;</button>
                         <strong>ERROR!</strong> Login incorrecto.
+                      </div>
+                      <div class="alert alert-danger alert-dismissible" style="display:none;" id="alreadyexists">
+                        <button type="button" class="close" data-dismiss="alert">&times;</button>
+                        <strong>Usuario o mail registrado.</strong> Por favor, acceda por la página de Login.
+                      </div>
+                      <div class="alert alert-danger alert-dismissible" style="display:none;" id="passnotmatch">
+                        <button type="button" class="close" data-dismiss="alert">&times;</button>
+                        <strong>Error.</strong> Las contraseñas no coinciden.
                       </div>
                 </div>
             </div>
